@@ -27,3 +27,17 @@ small {
 p {
 	line-height: 30px;
 }
+
+ol li {
+	line-height: 50px;
+}
+
+input[type=text], input[type=password], textarea {
+	-webkit-appearance: none;
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+	outline: none;
+}

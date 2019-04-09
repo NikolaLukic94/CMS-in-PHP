@@ -5,7 +5,42 @@ session_start();
 include_once('../includes/connection.php');
 
 if(isset($_SESSION['logged_in'])) {
+?>
 
+
+<html>
+<head>
+	<title>CMS App</title>
+	<link rel="stylesheet" type="../assets/style.css" href="">
+</head>
+<body>
+	<div class="container">
+		<a href="index.php" id="logo">CMS</a>
+
+		<br>
+			<ol>
+				<li>
+					<a href="add.php">
+						Add Article
+					</a>
+				</li>
+				<li>
+					<a href="delete.php">
+						Delete Article
+					</a>
+				</li>
+				<li>
+					<a href="logout.php">
+						Logout
+					</a>
+				</li>
+			</ol>
+		</div>
+</body>
+</html>
+
+
+<?php
 }	else {
 
 	if (isset($_POST['username'], $_POST['password'])) {
@@ -48,7 +83,7 @@ if(isset($_SESSION['logged_in'])) {
 				<br>
 				<br>
 			</small>
-
+		?>
 		<form action="index.php" method="post" autocomplete="off">
 			<input type="text" name="username" placeholder="Username">
 			<input type="text" name="password" placeholder="Password">	
